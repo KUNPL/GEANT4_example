@@ -1,0 +1,75 @@
+\documentclass[a4paper, oneside, 12pt]{memoir}
+
+\usepackage{kotex}
+\usepackage{amsmath,amssymb,textcomp}
+\usepackage{bm}
+\usepackage{graphicx}
+\usepackage{verbatim}
+\usepackage{float}
+
+\newcommand{\bdel}{\bm{\nabla}}
+\newcommand{\rd}{\partial}
+
+\setlength{\marginparwidth}{0.1pt}
+\setlength{\marginparpush}{0.1pt}
+\setlength{\textheight}{0.72\paperheight}
+\setlength{\textwidth}{0.8\paperwidth}
+\setlength{\uppermargin}{0.15\paperwidth}
+\setlength{\spinemargin}{0.15\paperwidth}
+\setlength{\marginparsep}{0.15\paperwidth}
+\setlength{\oddsidemargin}{-12pt}
+\setlength{\evensidemargin}{-12pt}
+
+\setsecnumdepth{subsection}
+\maxtocdepth{subsection}
+
+\usepackage{color}
+\usepackage{listings}
+\definecolor{Brown}{cmyk}{0,0.81,1,0.60}
+\definecolor{OliveGreen}{cmyk}{0.64,0,0.95,0.40}
+\definecolor{CadetBlue}{cmyk}{0.62,0.57,0.23,0}
+\lstset{language=C++,frame=ltrb,framesep=5pt,basicstyle=\scriptsize,
+keywordstyle=\ttfamily\color{OliveGreen},
+identifierstyle=\ttfamily\color{CadetBlue}\bfseries,
+commentstyle=\color{Brown},
+stringstyle=\ttfamily,
+showstringspaces=false}
+
+\newfloat{code}{bth}{loc}
+\floatname{code}{Code}
+\renewcommand{\thecode}{\arabic{chapter}.\arabic{code}}
+
+\newenvironment{pc}
+{
+\\
+\noindent
+\begin{minipage}[c]{\textwidth}
+}
+{
+\end{minipage}
+\\
+}
+
+\title{GEANT4 무작정 따라하기}
+\author{장 진희\\geniejhang@majimak.com}
+
+\begin{document}
+\maketitle
+\begin{center}
+Second Edition
+
+Based on the advice of \textbf{Kisoo Lee}
+\end{center}
+\thispagestyle{empty}
+
+\newpage
+\tableofcontents
+\listof{code}{List of Codes}
+
+\newpage
+\include{tex/intro}
+\include{tex/finalResult}
+\include{tex/getStarted}
+\include{tex/extractData}
+\include{tex/finallyEnd}
+\end{document}

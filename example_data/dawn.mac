@@ -1,0 +1,5 @@
+/vis/open DAWNFILE
+/vis/drawVolume
+/vis/viewer/set/viewpointThetaPhi 140 160
+/vis/scene/add/axes 0 0 -10 5 cm
+/vis/viewer/flush
